@@ -5,6 +5,8 @@ const anom = document.getElementById('anom');
 const alogin= document.getElementById('alogin');
 const apassword = document.getElementById('apassword');
 const apassword2 = document.getElementById('apassword2');
+const retexte=/[0-9]/
+const renum=/[a-zA-Z]/
 
 //Functions-------------------------------------------------------------
 function showError(input, message) {//Afficher les messages d'erreur
@@ -52,12 +54,9 @@ function checkLength(input) {
 }
 //
 function checkPassword(input){
-    if(!preg_match('^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$',input)){
-        showError(input, `${getFieldName(input)} Verifier les caractere du mot de psse!`)
+    if((!retexte.test(input.value)) || (!renum.test(input.value))) {
+        showError(input, "Mot de pass invalid")
     }
-    // if(input.value=='password') {
-    //     showError(input,'impossible!');
-    // }
     else{
         showSuccess(input);
     }
