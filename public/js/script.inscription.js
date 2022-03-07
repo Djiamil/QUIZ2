@@ -59,7 +59,7 @@ function checkPassword(input){
     //     showError(input,'impossible!');
     // }
     else{
-        showSucceass(input);
+        showSuccess(input);
     }
 }
 
