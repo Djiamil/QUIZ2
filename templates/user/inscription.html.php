@@ -1,38 +1,46 @@
-<?php
-require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
-require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
-?>
-    <div class="containereP">
+
+    
         <div class="containere">
-                <form class="form" id="form">
-                    <!-- <h2>Register With Us</h2> -->
-                    <h2>Join ODC Club</h2>
+                <form class="form" id="form_1" action="<?=WEB_ROOT?>" method="POST">
+                <input type="hidden" name="controller" value="securite">
+                <input type="hidden" name="action" value="inscription">
+                    <h3>S INSCRIRE</h3>
+                    <h4>Pour tester votre culture generale</h4>
+                    <hr style="width:100%;">
                     <div class="form-controle">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Enter username">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" id="aprenom" placeholder="Aaaaa">
                         <small>Error message</small>
                     </div>
                     <div class="form-controle">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Enter email">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="anom" placeholder="BBBB">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-controle">
+                        <label for="login">Login</label>
+                        <input type="text" id="alogin" placeholder="aabaab">
                         <small>Error message</small>
                     </div>
                     <div class="form-controle">
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter password">
+                        <input type="password" id="apassword" placeholder="...........">
                         <small>Error message</small>
                     </div>
                     <div class="form-controle">
-                        <label for="password2">Confirm password</label>
-                        <input type="password" id="password2" placeholder="Confirm your password">
+                        <label for="password2">Confirmer Password</label>
+                        <input type="password" id="apassword2" placeholder="...........">
                         <small>Error message</small>
                     </div>
-                    <button>Submit</button>
+                    <div style="display:flex; justify-content:space-between;">
+                        <p>Avatar</p>
+                        <input type="file"  id="avatar" name="avatar">
+                    </div>
+                    <button >Creer compte</button>
                 </form>
-            </div>
-        <div class="coteimage"></div>
-    </div>
+                <div class="coteimage">
+                    <div id="tof"></div>
+                    <h4>Avatar du joueur</h4>
+                </div>
+        </div>
 
-<?php 
-    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
-?>

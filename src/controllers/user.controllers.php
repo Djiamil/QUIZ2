@@ -25,6 +25,12 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
                 
             }elseif($_REQUEST['action']=="liste.joueur"){
                 lister_joueur();
+            }elseif($_REQUEST['action']=="creer.question"){
+                    creer_question();
+            }elseif($_REQUEST['action']=="liste.questions"){
+                liste_questions();
+            }elseif($_REQUEST['action']=="creer.admin"){
+                creer_admin();
             }
         }
     }
@@ -43,11 +49,22 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
 
     }
-    // function sinscrire(){
-    //     ob_start();
-    //         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php");
-    //         $content_for_views=ob_get_clean();
-    //         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
-
-    // }
+    function creer_question(){
+        ob_start();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creer.question.html.php");
+        $content_for_views=ob_get_clean();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
+    }
+    function liste_questions(){
+        ob_start();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.question.html.php");
+        $content_for_views=ob_get_clean();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
+    }
+    function creer_admin(){
+        ob_start();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php");
+        $content_for_views=ob_get_clean();
+        require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
+    }
     

@@ -18,7 +18,7 @@ if(isset($_SESSION['KEY_ERRORS'])){
                     <p style="color:red"> <?= $errors['connexion']?><p>
                 <?php endif ?>
                 <label for="login">Email</label>
-                <input type="text" id="login" name="login"placeholder="Enter votre login">
+                <input type="text" id="login" name="login"placeholder="Login">
                 <small>Error message</small>
                 <?php if(isset($errors['login'])):?>
                     <p style="color:red"> <?= $errors['login']?><p>
@@ -26,7 +26,7 @@ if(isset($_SESSION['KEY_ERRORS'])){
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password">
+                <input type="password" id="password" name="password" placeholder="Password">
                 <small>Error message</small>
                 <?php if(isset($errors['password'])):?>
                     <p style="color:red"> <?= $errors['password']?><p>
@@ -34,7 +34,7 @@ if(isset($_SESSION['KEY_ERRORS'])){
             </div>
             <div>
                 <input type="submit" value="Connexion" id="connexion">
-                <a href="<?=WEB_ROOT."?controller=securite&action=sincrire.au.jeu"?>" >S inscrire pour jouer</a>
+                <a href="<?=WEB_ROOT."?controller=securite&action=sincrire.pour.jouer"?>" style="margin-left:9vw;" >S inscrire pour jouer ?</a>
             </div>
         
         </form>

@@ -6,6 +6,12 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
                 $login=$_POST['login'];
                 $password=$_POST['password'];
                 connexion($login,$password);
+            }elseif($_REQUEST['action']=="inscription"){
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
+                    echo "Bienvenue au jeu";
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
+
             }
         }
     }
@@ -16,9 +22,11 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
                 require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
             }elseif($_REQUEST['action']=="deconnexion"){
                 logout();
-            }elseif($_REQUEST['action']=="sincrire.au.jeu"){
-                  
+            }elseif($_REQUEST['action']=="sincrire.pour.jouer"){
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
                 require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php");
+                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
             }  
         }else{
             require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
