@@ -12,9 +12,11 @@ function find_users(string $role):array{
      $users=json_to_array("users");
      $resulta=[];
      foreach ($users as $user){
-          if($user["role"]==$role){
-               $resulta=$user;
+          if($user['role']==$role){
+               $resulta[]=$user;
           }
-         return $resulta; 
+          
      }
+     return $resulta;
 }
+

@@ -2,8 +2,7 @@
     display: flex;
     flex: 6;
     flex-direction: column;
-    margin: 2rem;
-    width: 100%;
+    margin: 5rem;
 }
 .parametre{
     background-color: #1ed7e4;
@@ -133,4 +132,19 @@ li{
     flex: 3;
     border: 0.2rem solid rgb(4, 0, 255);
     margin: 1rem;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    border: 0.2rem solid black;
+    margin: 0;
+    background-color: bisque;
+}
+td{
+    border: 0.2rem solid black;
+    margin: 0;
+}
+a{
+    text-decoration: none;
 }

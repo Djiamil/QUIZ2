@@ -1,6 +1,6 @@
 <?php
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
-    
+
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(isset($_REQUEST['action'])){
             if($_REQUEST['action']=="connexion"){
@@ -31,11 +31,10 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
 
     function lister_joueur(){
         ob_start();
-        $data=find_users(ROLE_JOUEUR);
+        $data=find_users("ROLE_JOUEUR");
         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php");
         $content_for_views=ob_get_clean();
         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
-
     }
     function jeu(){
         ob_start();

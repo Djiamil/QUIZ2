@@ -13,3 +13,4 @@ function is_joueur(){
     function is_admin(){
         return is_connect() && $_SESSION[KEY_USER_CONNECT]['role']==ROLE_ADMIN;
     }
+    
