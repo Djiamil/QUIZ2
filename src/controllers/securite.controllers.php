@@ -7,11 +7,24 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
                 $password=$_POST['password'];
                 connexion($login,$password);
             }elseif($_REQUEST['action']=="inscription"){
-                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
-                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
-                    echo "Bienvenue au jeu";
-                require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
+                extract($_POST);
+                if (!is_connect()) {
+                    inscription($alogin,$apassword);
+                    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+                    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
+                        echo "Bienvenue au jeu $aprenom";
+?>    
+                    <a href="<?=WEB_ROOT?>">Cliquez ici pour vous connecter</a>
+<?php
+                        echo "Connectez vous avec vore login $alogin et votre de passe $apassword";
+                    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");    
+                } else {
+                    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+                    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
 
+                }
+                
+               
             }
         }
     }
@@ -41,7 +54,7 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
         if(count($errors)==0){
             valid_email('login',$login,$errors);
         }
-        champ_obligatoire('password',$password,$errors);
+        champ_obligatoire('password',$password,$errors,"password obligatoire");
          if(count($errors)==0){
             //  Appel d'une fonction du model
             $user=find_user_login_password($login,$password);
@@ -73,4 +86,20 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
         header("location:".WEB_ROOT);
         exit();
     }
+
+    function inscription(string $login,string $password):void{
+        $errors=[];
+        champ_obligatoire('login',$login,$errors,"login obligatoire");
+        if(count($errors)==0){
+            valid_email('login',$login,$errors);
+        }
+        champ_obligatoire('password',$password,$errors,"password obligatoire");
+        if(count($errors)==0){
+        }else{
+            $errors['inscription']="login ou mot de passe incorrect";
+            $_SESSION['KEY_ERRORS']=$errors;
+            header("location:".WEB_ROOT."?controller=securite&action=sincrire.pour.jouer");
+                exit();
+            }
+        }
     

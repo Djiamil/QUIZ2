@@ -13,10 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 88vh;
+    min-height: auto;
     margin: 0;
+    margin-top: 15vh;
     width: 40%;
     margin-left: 30%;
+    flex-direction: column;
 }
 
 
@@ -29,7 +31,7 @@
 
 .form {
     border-radius: 5px;
-    width: 400px;
+    width: 100%;
     height: auto;
     background-color: white;
     padding: 30px 40px;
@@ -81,15 +83,47 @@
     visibility: visible;
 }
 
-.form button {
+#connexion{
     cursor: pointer;
-    background-color: #3498db;
-    border: 2px solid #3498db;
+    background-color: rgb(81,191,208);
+    border: 2px solid rgb(81,191,208);
     border-radius: 4px;
     color: #fff;
     display: block;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     margin-top: 20px;
-    width: 100%;
+    width: auto;
+}
+#aa{
+    color: #777;
+    font-size: 1.5rem;
+
+}
+.logologin{
+    position: absolute;
+}
+.imglogin{
+    left: 33vw;
+    position: relative;
+    margin-top: 35px;
+}
+.logopass{
+    position: absolute;
+}
+
+.imgpass{
+    left: 33vw;
+    position: relative;
+    margin-top: 35px;
+
+}
+.loginform{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    color: white;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    justify-content: space-between;
 }

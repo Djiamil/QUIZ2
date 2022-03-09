@@ -3,7 +3,7 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(isset($_REQUEST['action'])){
-            if($_REQUEST['action']=="connexion"){
+            if($_REQUEST['action']=="inscription"){
                 echo "Traiter le formulaire de connexion";
             }
         }

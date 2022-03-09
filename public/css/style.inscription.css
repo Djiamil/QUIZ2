@@ -22,6 +22,11 @@
 
 .coteimage {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+    align-items: center;
+    flex-direction: column;
 }
 
 .form {
@@ -77,8 +82,8 @@
 
 .form button {
     cursor: pointer;
-    background-color: #3498db;
-    border: 2px solid #3498db;
+    background-color: rgb(81,191,208);
+    border: 2px solid rgb(81,191,208);
     border-radius: 4px;
     color: #fff;
     display: block;
@@ -87,4 +92,30 @@
     margin-top: 20px;
     width: 30%;
     margin-left: 25%;
+}
+#avatar{
+    position: absolute;
+    visibility: hidden;
+    left: -900px;
+    width: 0;
+    height: 0;
+}
+#tof{
+        display: flex;
+        flex: 2;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 25rem;
+        border: 0.1rem solid rgb(14, 13, 13);
+        background-color: aliceblue;
+        background-image:url(../uploads/6.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        cursor: pointer;
+}
+#tof:hover{
+    background-color:rgb(81,191,208) ;
 }

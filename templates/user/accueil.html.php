@@ -21,7 +21,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
                 <div class="divGtop">
                     <div class="photoim"></div>
                     <div class="monNom">
-                        <h1 class="h1Name">DJIAMIL</br>Mbaye Lo</h1>
+                        <h1 class="h1Name">DJIAMIL</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mbaye Lo</h1>
                     </div>
                 </div>
                 <div class="divGbutton">
@@ -55,7 +55,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
                 </div>
             </div>
         </div>
-    </div>
+</div>
 
 <?php 
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");

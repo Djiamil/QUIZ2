@@ -30,6 +30,15 @@ function checkEmail(input) {//Tester si l'email est valide :  javascript : valid
         showError(input,`Email is not valid!`);
     }
 }
+function verifieEmail() {//Tester si l'email est valide :  javascript : valid email
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (re.test(alogin.value.trim().toLowerCase())) {
+        return true
+    } else {
+        return false
+    }
+}
 //
 function checkRequired(inputArray) {// Tester si les champs ne sont pas vides
     inputArray.forEach(input => {
@@ -39,6 +48,13 @@ function checkRequired(inputArray) {// Tester si les champs ne sont pas vides
             showSuccess(input);
         }
     });
+}
+function champVide(input) {// Tester si les champs ne sont pas vides
+    if (input.value.trim() === ''){
+        return true
+    }else{
+        return false
+    }
 }
 //
 function getFieldName(input) {
@@ -52,19 +68,41 @@ function checkLength(input) {
         showSuccess(input);
     }
 }
+function longueurPassword() {
+    if(apassword.value.length < 6){
+        return false
+    }else{
+        return true
+    }
+}
 //
 function checkPassword(input){
     if((!retexte.test(input.value)) || (!renum.test(input.value))) {
-        showError(input, "Mot de pass invalid")
+        showError(input, "Format incorrect");
     }
     else{
         showSuccess(input);
+    }
+}
+function verifiePassword(input){
+    if((!retexte.test(input.value)) || (!renum.test(input.value))) {
+        return false
+    }
+    else{
+        return true
     }
 }
 
 function checkPasswordMatch(input1, input2) {
     if (input1.value !== input2.value) {
         showError(input2, 'Mot De passe non conformes!');
+    }
+}
+function motDePasseConformes() {
+    if (apassword.value !== apassword2.value) {
+        return false
+    }else{
+        return true
     }
 }
 
@@ -74,45 +112,13 @@ function checkPasswordMatch(input1, input2) {
 
 //Even listeners--------------------------------------------------------
 aform.addEventListener('submit',function(e){
-    e.preventDefault();//Bloquer la soumission du formulaire
-    
-
-    checkRequired([aprenom,anom,alogin, apassword,apassword2]);
-    //
-    checkLength(apassword);
-    checkEmail(alogin);
-    checkPassword(apassword);
-    checkPasswordMatch(apassword,apassword2);
-
-
-    /*
-    function isValidEmail(email) {//Tester si l'email est valide
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-    if (username.value === '') {
-       showError(username,'Username is required!'); 
-    }else{
-        showSuccess(username);
+    if (champVide(anom) ||champVide(aprenom)||champVide(alogin)||!verifieEmail()|| !longueurPassword() ||!motDePasseConformes() ) {
+        e.preventDefault();
+        checkRequired([aprenom,anom,alogin, apassword,apassword2]);
+        checkLength(apassword);
+        checkEmail(alogin);
+        checkPassword(apassword);
+        checkPasswordMatch(apassword,apassword2); 
     }
-
-    if (email.value === '') {
-       showError(email,'Email is required!'); 
-    }else if(!isValidEmail(email.value)){
-        showError(email,'Email is not valid!');
-    }else{
-        showSuccess(email);
-    }
-
-    if (password.value === '') {
-       showError(password,'password is required!'); 
-    }else{
-        showSuccess(password);
-    }
-
-    if (password2.value === '') {
-       showError(password2,'Password 2 is required!'); 
-    }else{
-        showSuccess(password2);
-    }*/
+   
 });
