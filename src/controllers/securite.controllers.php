@@ -10,7 +10,6 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
                 // extract($_POST);
                 $tab=[];
                 recuperer_donnees($tab);
-                // var_dump($tab);die;
                 inscription($tab);
             
             }
@@ -76,39 +75,49 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
     }
 
 function inscription($tab):void{
-        $errors=[];
-        // valid_password() et valid_email() et conformite() et champ_valide()
-        champ_obligatoire('aprenom',$tab['prenom'],$errors,"prenom obligatoire");
-        champ_obligatoire('anom',$tab['nom'],$errors,"nom obligatoire");
-        valid_email('alogin',$tab['login'],$errors);
-        champ_obligatoire('alogin',$tab['login'],$errors,"login obligatoire");
-        valid_password("apassword",$tab['password'],$errors);
-        champ_obligatoire('apassword',$tab['password'],$errors,"password 1 est obligatoire");
-        valid_password("apassword2",$tab['password2'],$errors);
-        champ_obligatoire('apassword2',$tab['password2'],$errors,"password 2 est obligatoire");
-        matched_passwords($tab['password'],$tab['password2'],'apassword2',$errors);
-        login_already_exists($tab['login'],$errors,'alogin');
-        if(count($errors)==0){
-            die('ok');
-        }else{
-            // Erreur de validation
-            $_SESSION['KEY_ERRORS']=$errors;
-
-            if(!is_connect()){
-                header("location:".WEB_ROOT."?controller=securite&action=sincrire.pour.jouer");
-                exit();
-            }
-            if(is_admin()){
-                header("location:".WEB_ROOT."?controller=user&action=creer.admin");
-                exit();
-            }
+    $errors=[];
+    // valid_password() et valid_email() et conformite() et champ_valide()
+    champ_obligatoire('aprenom',$tab['prenom'],$errors,"prenom obligatoire");
+    champ_obligatoire('anom',$tab['nom'],$errors,"nom obligatoire");
+    valid_email('alogin',$tab['login'],$errors);
+    champ_obligatoire('alogin',$tab['login'],$errors,"login obligatoire");
+    valid_password("apassword",$tab['password'],$errors,"password 1");
+    valid_password("apassword2",$tab['password2'],$errors,"password 2");
+    matched_passwords($tab['password'],$tab['password2'],'apassword2',$errors);
+    login_already_exists($tab['login'],$errors,'alogin');
+    
+    if(count($errors)==0){
+        // si pas d'erreur
+        if(!is_connect()){
+            recuperer_donnees($tab);
+        }
+        if(is_admin()){
+            recuperer_donnees($tab,'ROLE_ADMIN',0);
+        }
+        // enregistrement
+        $donnees_a_enregistrer=$tab;
+        unset($tab['password2']);
+        $data_json=array_to_json("users",$tab);
+        file_put_contents($data_json,PATH_DB);        
+    }else{
+        // Erreur de validation
+        $_SESSION['KEY_ERRORS']=$errors;
+        
+        if(!is_connect()){
+            header("location:".WEB_ROOT."?controller=securite&action=sincrire.pour.jouer");
+            exit();
+        }
+        if(is_admin()){
+            header("location:".WEB_ROOT."?controller=user&action=creer.admin");
+            exit();
         }
     }
+}
     
 function recuperer_donnees(&$tab,$role=ROLE_JOUEUR,$score=15){
     extract($_POST);
-    $tab['prenom']=$aprenom;
     $tab['nom']=$anom;
+    $tab['prenom']=$aprenom;
     $tab['login']=$alogin;
     $tab['password']=$apassword;
     $tab['password2']=$apassword2;

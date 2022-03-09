@@ -6,6 +6,8 @@
 
 * {
     box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
 }
 
 .containere {
@@ -17,9 +19,20 @@
     background-color: white;
     width: 80%;
     margin-left: 10%;
-    position: absolute;
-}
 
+}
+.mbaye{
+    /* width: ; */
+    height: 200px;
+position: absolute;
+top: 40%;
+right: 20%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
 .coteimage {
     flex: 1;
     display: flex;
@@ -27,18 +40,22 @@
     margin-bottom: 10vh;
     align-items: center;
     flex-direction: column;
-    position: relative;
+}
+.coteimage h4{
+    position: absolute;
+    /* bottom: -20%; */
 }
 
 .form {
     flex: 1.5;
-    padding: 30px 40px;
+    /* padding: 30px 40px; */
 }
 
 .form-controle {
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
+    width: 700px;
 }
 
 .form-controle label {

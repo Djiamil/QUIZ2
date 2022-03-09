@@ -9,12 +9,17 @@ function json_to_array(string $key):array{
 }
 
 //Enregistrement et Mis a jour des donnees du fichier
-function array_to_json(string $key,array $tab):array{
-    $data=json_decode(file_get_contents(PATH_DB));
-    $data[$key][]=$tab;
-    $data=json_encode($data);
-    file_put_contents($data,PATH_DB);
+function array_to_json(string $key,array $tab):string{
+    $data_json=file_get_contents(PATH_DB);
+    $data=json_decode($data_json,true);
+    $dataArray[$key][]=$tab;
+    $data_json=json_encode($dataArray);
+    return  $data_json;
 }    
+
+
+
+
     // <?php
     // $file = 'people.txt';
 // Une nouvelle personne à ajouter
