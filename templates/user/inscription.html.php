@@ -55,15 +55,13 @@
                         
                     </div>
                     <button type="submit">Creer compte</button>
-                </form>
-                <div class="coteimage" style="left: 5rem;"> 
-                    <div>
-                        <label for="avatar" id="tof" style="background-color: rgb(81,191,208);color:white;font-size:1.5rem;"></label>
-                        <input type="file"  id="avatar" name="avatar" value="avatar">
-                    </div>
+                    <div class="coteimage" style="left: 5rem;"> 
+                        <div>
+                            <label for="avatar" id="tof"></label>
+                            <input type="file"  id="avatar" name="avatar" value="avatar">
+                        </div>
                     <h4>Avatar du joueur</h4>
-                </div>
+                    </div>
+                </form>    
+                
         </div>
-<?php 
-    var_dump($errors);
-?>

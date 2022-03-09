@@ -17,7 +17,7 @@
     background-color: white;
     width: 80%;
     margin-left: 10%;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
+    position: absolute;
 }
 
 .coteimage {
@@ -27,6 +27,7 @@
     margin-bottom: 10vh;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .form {
@@ -102,20 +103,18 @@
 }
 #tof{
         display: flex;
-        flex: 2;
         height: 15rem;
         width: 15rem;
         border-radius: 25rem;
-        border: 0.1rem solid rgb(14, 13, 13);
-        background-color: aliceblue;
-        background-image:url(../uploads/6.png);
+        border: 0.1rem solid rgb(81,191,208);
+        /* background-color: aliceblue; */
+        /* background-image:url(../uploads/6.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        align-items: center;
-        justify-content: center;
         margin: 1rem;
         cursor: pointer;
 }
 #tof:hover{
-    background-color:rgb(81,191,208) ;
+    /* background-color:rgb(81,191,208) ; */
 }
+

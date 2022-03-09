@@ -122,3 +122,13 @@ aform.addEventListener('submit',function(e){
     }
    
 });
+
+
+
+const tof=document.getElementById('tof');
+const avatar=document.getElementById('avatar');
+
+avatar.addEventListener("change",()=>{
+    const src=URL.createObjectURL(avatar.files[0]);
+    tof.style.backgroundImage= `url("${src}")`;
+})

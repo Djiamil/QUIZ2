@@ -3,9 +3,10 @@
             "nom": "Wane",
             "prenom": "Birane Baila",
             "login": "joueur@gmail.com",
-            "password": "joueur",
-            "role": "ROLE_JOUEUR",
-            "score": 15
+            "password": "admin123",
+            "role": "ROLE_ADMIN",
+            "score": 15,
+            "avatar":""
         },
         {
             "nom": "Diop",
@@ -13,95 +14,21 @@
             "login": "selle@gmail.com",
             "password": "Selle0",
             "role": "ROLE_JOUEUR",
-            "score": 70
-        },
-        {
-            "nom": "Diop",
-            "prenom": "Zeyna",
-            "login": "zeyna@gmail.com",
-            "password": "Zeyna0",
-            "role": "ROLE_JOUEUR",
-            "score": 90
-        },
-        {
-            "nom": "Diop",
-            "prenom": "Awa",
-            "login": "awadiop@gmail.com",
-            "password": "awadiop0",
-            "role": "ROLE_JOUEUR",
-            "score": 60
-        },
-        {
-            "nom": "Mor",
-            "prenom": "Serigne",
-            "login": "serignemor@gmail.com",
-            "password": "serignemor0",
-            "role": "ROLE_JOUEUR",
-            "score": 40
-        },
-        {
-            "nom": "Sow",
-            "prenom": "Meissa Rawane",
-            "login": "rawane@gmail.com",
-            "password": "rawane1",
-            "role": "ROLE_JOUEUR",
-            "score": 80
-        },
-        {
-            "nom": "Ngom",
-            "prenom": "Tening",
-            "login": "tening@gmail.com",
-            "password": "tening0",
-            "role": "ROLE_JOUEUR",
-            "score": 50
-        },
-        {
-            "nom": "Lo",
-            "prenom": "Fatou",
-            "login": "fatou@gmail.com",
-            "password": "fatou0",
-            "role": "ROLE_JOUEUR",
-            "score": 40
-        },
-        {
-            "nom": "Niass",
-            "prenom": "Cheikhou",
-            "login": "cheikhou@gmail.com",
-            "password": "cheikhou0",
-            "role": "ROLE_JOUEUR",
-            "score": 73
-        },
-        {
-            "nom": "Dieye",
-            "prenom": "Souleymane",
-            "login": "souleymanedieye@gmail.com",
-            "password": "souleymane0",
-            "role": "ROLE_JOUEUR",
-            "score": 75
-        },
-        {
-            "nom": "Lo",
-            "prenom": "Mbaye",
-            "login": "mbayelo@gmail.com",
-            "password": "Mbaye0",
-            "role": "ROLE_ADMIN",
-            "score": 0
-        },
-        {
-            "nom": "Faye",
-            "prenom": "Khadija",
-            "login": "khadija@gmail.com",
-            "password": "Khadija0",
-            "role": "ROLE_ADMIN",
-            "score": 0
-        },
-        {
-            "nom": "Mbodj",
-            "prenom": "Mouhamed",
-            "login": "mouhamed@gmail.com",
-            "password": "Mouha0",
-            "role": "ROLE_ADMIN",
-            "score": 0
+            "score": 70,
+            "avatar":""
         }
+    ],
+     "questions":[{
+           "question":"Les langages web",
+           "a":"HTML",
+           "b":"R",
+           "c":"Java"
+        },
+        {
+            "question":"D ou vient le corona",
+           "a":"Chine",
+           "b":"Italie"
+        }
+
     ]
 }

@@ -57,6 +57,7 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
     }
     function liste_questions(){
         ob_start();
+        $questions=json_to_array('questions');
         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.question.html.php");
         $content_for_views=ob_get_clean();
         require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
