@@ -28,7 +28,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
                     <ul class="myMenu">
                         <div class="questliste">
                              <?php if(is_admin()):?>
-                                    <li class="listQuestion"><a href="<?=WEB_ROOT."?controller=user&action=liste.questions"?>" class="Question">Liste Questions</a></li>
+                                    <li class="listQuestion"><a href="<?=WEB_ROOT."?controller=question&action=liste.questions"?>" class="Question">Liste Questions</a></li>
                                     <img class="copy" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste.png"?>">
                                 </div>    
                                 <div class="questliste">
@@ -40,7 +40,7 @@ require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."menu.html.php");
                                             <img class="copyR" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-liste-active.png"?>">
                                     </div> 
                                 <div class="questliste">
-                                    <li class="creerQuestion"><a href="<?=WEB_ROOT."?controller=user&action=creer.question"?>" class="CrQuestion">Créer Questions</a></li>
+                                    <li class="creerQuestion"><a href="<?=WEB_ROOT."?controller=question&action=creer.question"?>" class="CrQuestion">Créer Questions</a></li>
                                     <img class="plusR" src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."ic-ajout-active.png"?>">
                              <?php endif ?>
                         </div>

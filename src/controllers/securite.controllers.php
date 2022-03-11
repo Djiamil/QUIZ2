@@ -3,9 +3,9 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(isset($_REQUEST['action'])){
             if($_REQUEST['action']=="connexion"){
-                $login=$_POST['login'];
-                $password=$_POST['password'];
-                connexion($login,$password);
+                    $login=$_POST['login'];
+                    $password=$_POST['password'];
+                    connexion($login,$password);
             }elseif($_REQUEST['action']=="inscription"){
                 // extract($_POST);
                 $tab=[];
@@ -98,7 +98,7 @@ function inscription($tab):void{
         $donnees_a_enregistrer=$tab;
         unset($tab['password2']);
         $data_json=array_to_json("users",$tab);
-        file_put_contents($data_json,PATH_DB);        
+        file_put_contents(PATH_DB,$data_json);        
     }else{
         // Erreur de validation
         $_SESSION['KEY_ERRORS']=$errors;
@@ -123,6 +123,15 @@ function recuperer_donnees(&$tab,$role=ROLE_JOUEUR,$score=15){
     $tab['password2']=$apassword2;
     $tab['role']=$role;
     $tab['score']=$score;
+    $name=$_FILES['avatar']['name'];
+    $name=$alogin;
+    $pos = explode("@gmail.com",$name);
+    // $pos = stripos($alogin,'@');
+    $tempNam=$_FILES['avatar']['tmp_name'];
+    $tempNam=$pos;
+    var_dump($tempNam);die;
+    // move_uploaded_file($tempNam,'',$name);
+    
 }
 // inscription
 function login_already_exists($login,&$errors,$key,$message='login already exists'){

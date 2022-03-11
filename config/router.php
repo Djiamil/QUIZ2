@@ -7,6 +7,10 @@
             case "user":
                  require_once(PATH_SRC."controllers/user.controllers.php");
             break;
+            case "question":
+            require_once(PATH_SRC."controllers/question.controllers.html.php");
+            break;
+            
         }
     }else{
         require_once(PATH_SRC."controllers/securite.controllers.php");

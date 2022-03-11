@@ -1,1 +1,0 @@
-<p style="background-color:blue; width:100%">Creer questions</p>

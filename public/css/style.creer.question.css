@@ -1,0 +1,95 @@
+
+.letout{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.questionn{
+    color: aqua;
+}
+.contQuestion{
+    display: flex;
+    border: 0.5rem solid aqua;
+    width: 100%;
+    height:100%;
+    border-radius: 4%;
+    flex-direction: column;
+}
+.areatext{
+    display: flex;
+    width: 80%;
+    height: 10%;
+    margin: 2%;
+    align-items: center;
+}
+.aratextarea{
+    margin-left: 1rem;
+    min-width : 90%;
+    min-height : 90%;
+    max-width : 65%;
+    max-height : 65%;
+   }
+
+
+
+.nbrpoint{
+    display: flex;
+    width: 80%;
+    height: 10%;
+    align-items: center;
+    margin: 1%;
+    
+}
+.butonmoin{
+    width:2rem;
+    background-color: brown;
+    margin: 2%;
+}
+.typereponse{
+    display: flex;
+    width: 100%;
+    height: 7%;
+    align-items: center;
+}
+#reptype{
+    margin: 1%;
+    width: 60%;
+    height: 80%;
+}
+.butretype{
+    width:2rem;
+    height: 80%;
+    background-color: aqua;
+}
+.choixreponse{
+    display: flex;
+    align-items: center;
+}
+#radioradio{
+    display: flex;
+    width: 5%;
+    height: 30%;
+}
+#checboxbox{
+    display: flex;
+    width: 5%;
+    height: 30%;
+}
+#choixrep{
+    display: flex;
+    width: 50%;
+    height: 30%;
+}
+.fasolide{
+    display: flex;
+    height: 30%;
+    width: 10%;
+}
+.vaenregistrer{
+    display: flex;
+    width: 13%;
+    margin-left: 80%;
+    margin-top: 20%;
+}

@@ -1,34 +1,66 @@
 {
-    "users": [{
-            "nom": "Wane",
-            "prenom": "Birane Baila",
-            "login": "joueur@gmail.com",
-            "password": "admin123",
-            "role": "ROLE_ADMIN",
-            "score": 15,
-            "avatar":""
-        },
-        {
-            "nom": "Diop",
-            "prenom": "Selle",
-            "login": "selle@gmail.com",
-            "password": "Selle0",
-            "role": "ROLE_JOUEUR",
-            "score": 70,
-            "avatar":""
-        }
-    ],
-     "questions":[{
-           "question":"Les langages web",
-           "a":"HTML",
-           "b":"R",
-           "c":"Java"
-        },
-        {
-            "question":"D ou vient le corona",
-           "a":"Chine",
-           "b":"Italie"
-        }
-
-    ]
+  "users": [
+    {
+      "nom": "Wane",
+      "prenom": "Birane Baila",
+      "login": "joueur@gmail.com",
+      "password": "admin123",
+      "role": "ROLE_ADMIN",
+      "score": 15,
+      "avatar": ""
+    },
+    {
+      "nom": "Diop",
+      "prenom": "Selle",
+      "login": "selle@gmail.com",
+      "password": "Selle0",
+      "role": "ROLE_JOUEUR",
+      "score": 70,
+      "avatar": ""
+    },
+    {
+      "nom": "DIOUf",
+      "prenom": "BMD",
+      "login": "bmddiouf10@gmail.com",
+      "password": "Bmd123",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "Sambe",
+      "prenom": "Hamed Dame",
+      "login": "hahmedsambe@10gmail.com",
+      "password": "Hamed123",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "ffff",
+      "prenom": "ffffffffffff",
+      "login": "AZejoueur@gmail.com",
+      "password": "F456rhh",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    }
+  ],
+  "questions": [
+    { "question": "Les langages web", "a": "HTML", "b": "R", "c": "Java" },
+    { "question": "D ou vient le corona", "a": "Chine", "b": "Italie" }
+  ],
+  "0": {
+    "nom": "dddddddddd",
+    "prenom": "dddddd",
+    "login": "sdfgjosdsueur@gmail.com",
+    "password": "Der234",
+    "role": "ROLE_JOUEUR",
+    "score": 15
+  },
+  "1": {
+    "nom": "ffff",
+    "prenom": "ffffffffffff",
+    "login": "AZejoueur@gmail.com",
+    "password": "F456rhh",
+    "role": "ROLE_JOUEUR",
+    "score": 15
+  }
 }

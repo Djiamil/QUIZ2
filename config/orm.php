@@ -12,8 +12,8 @@ function json_to_array(string $key):array{
 function array_to_json(string $key,array $tab):string{
     $data_json=file_get_contents(PATH_DB);
     $data=json_decode($data_json,true);
-    $dataArray[$key][]=$tab;
-    $data_json=json_encode($dataArray);
+    $data[$key][]=$tab;
+    $data_json=json_encode($data);
     return  $data_json;
 }    
 

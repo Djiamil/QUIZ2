@@ -12,7 +12,7 @@
                     <input type="hidden" name="controller" value="securite">
                     <input type="hidden" name="action" value="inscription">
                     <h4>Pour tester votre culture generale</h4>
-                    <hr style="width:100%;">
+                    <hr style="width:60%;">
                     <div class="form-controle">
                         <label for="prenom">Prenom</label>
                         <input type="text" id="aprenom" placeholder="Aaaaa" name="aprenom">

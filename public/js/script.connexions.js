@@ -81,6 +81,7 @@ function passeMot(input){
 
 //Even listeners--------------------------------------------------------
 form.addEventListener('submit',function(a){
+    
     if (videe(login) || videe(password) || motDePasseCorrect()||passeMot() || password.length<6                                           ) {
         a.preventDefault();
         champRequis([login, password]);
