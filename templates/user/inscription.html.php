@@ -12,7 +12,7 @@
                     <input type="hidden" name="controller" value="securite">
                     <input type="hidden" name="action" value="inscription">
                     <h4>Pour tester votre culture generale</h4>
-                    <hr style="width:60%;">
+                    <hr style="width:100%;">
                     <div class="form-controle">
                         <label for="prenom">Prenom</label>
                         <input type="text" id="aprenom" placeholder="Aaaaa" name="aprenom">
@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-controle">
                     <?php if(isset($errors['inscription'])):?>
-                         <p style="color:red"> <?= $errors['inscription']?><p>
+                         <p style="color:blue;"> <?= $errors['inscription']?><p>
                     <?php endif ?>
                         <label for="nom">Nom</label>
                         <input type="text" id="anom" placeholder="BBBB" name="anom">

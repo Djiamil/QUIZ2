@@ -10,57 +10,140 @@
       "avatar": ""
     },
     {
-      "nom": "Diop",
-      "prenom": "Selle",
-      "login": "selle@gmail.com",
-      "password": "Selle0",
-      "role": "ROLE_JOUEUR",
-      "score": 70,
+      "nom": "Moustapha",
+      "prenom": "Der",
+      "login": "djamil@gmail.com",
+      "password": "djamil1",
+      "role": "ROLE_ADMIN",
+      "score": 0,
       "avatar": ""
     },
     {
-      "nom": "DIOUf",
-      "prenom": "BMD",
-      "login": "bmddiouf10@gmail.com",
-      "password": "Bmd123",
+      "nom": "Mbaye",
+      "prenom": "LO",
+      "login": "mbaye@gmail.com",
+      "password": "azerty1",
+      "role": "ROLE_ADMIN",
+      "score": 0,
+      "avatar": ""
+    },
+    {
+      "nom": "Fama",
+      "prenom": "LO",
+      "login": "fama@gmail.com",
+      "password": "fama12",
       "role": "ROLE_JOUEUR",
       "score": 15
     },
     {
-      "nom": "Sambe",
-      "prenom": "Hamed Dame",
-      "login": "hahmedsambe@10gmail.com",
-      "password": "Hamed123",
+      "nom": "ndiaye",
+      "prenom": "aziz",
+      "login": "niang@gmail.com",
+      "password": "azerty1",
       "role": "ROLE_JOUEUR",
       "score": 15
     },
     {
-      "nom": "ffff",
-      "prenom": "ffffffffffff",
-      "login": "AZejoueur@gmail.com",
-      "password": "F456rhh",
+      "nom": "n",
+      "prenom": "b",
+      "login": "qss@gmail.cc",
+      "password": "azerty1",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "Dieuwrigne",
+      "prenom": "Sy",
+      "login": "aaa@gmail.com",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "nnbb",
+      "prenom": "nn",
+      "login": "bnnhh@gmail.com",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "Qqq",
+      "prenom": "nbbn",
+      "login": "az@gm.co",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "diouf",
+      "prenom": "birame",
+      "login": "moussa@gh.co",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_ADMIN",
+      "score": 0
+    },
+    {
+      "nom": "hjj",
+      "prenom": "lo",
+      "login": "kkj@gh.co",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_ADMIN",
+      "score": 0
+    },
+    {
+      "nom": "youssou",
+      "prenom": "niang",
+      "login": "you@niang.lo",
+      "password": "Lpx48yqkvEgYtZm",
+      "role": "ROLE_ADMIN",
+      "score": 0
+    },
+    {
+      "nom": "www",
+      "prenom": "nbb",
+      "login": "qs@jk.co",
+      "password": "azerty1",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "Mbaye",
+      "prenom": "LO",
+      "login": "bbbbbbbbnnn@gmail.co",
+      "password": "azertya1",
+      "role": "ROLE_ADMIN",
+      "score": 0
+    },
+    {
+      "nom": "Mbaye",
+      "prenom": "1",
+      "login": "bbbbbbbb@gmail.co",
+      "password": "azerty1",
+      "role": "ROLE_JOUEUR",
+      "score": 15
+    },
+    {
+      "nom": "Mbaye",
+      "prenom": "LO",
+      "login": "nianglo@gmail.com",
+      "password": "azerty1",
       "role": "ROLE_JOUEUR",
       "score": 15
     }
   ],
   "questions": [
-    { "question": "Les langages web", "a": "HTML", "b": "R", "c": "Java" },
-    { "question": "D ou vient le corona", "a": "Chine", "b": "Italie" }
-  ],
-  "0": {
-    "nom": "dddddddddd",
-    "prenom": "dddddd",
-    "login": "sdfgjosdsueur@gmail.com",
-    "password": "Der234",
-    "role": "ROLE_JOUEUR",
-    "score": 15
-  },
-  "1": {
-    "nom": "ffff",
-    "prenom": "ffffffffffff",
-    "login": "AZejoueur@gmail.com",
-    "password": "F456rhh",
-    "role": "ROLE_JOUEUR",
-    "score": 15
-  }
+    {
+      "question": "Pourquoi bon vivre?",
+      "a": "pour se nourrir",
+      "b": "pour etre utile a la societe",
+      "c": "pour fonder une famille"
+    },
+    {
+      "question": "Qui est le meilleur jour de tous les temps",
+      "a": "Ronaldinho",
+      "b": "Zidedine Zidane",
+      "c": "Leo Messi"
+    }
+  ]
 }

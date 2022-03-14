@@ -83,10 +83,10 @@
     visibility: visible;
 }
 
-#connexion{
+#connexion {
     cursor: pointer;
-    background-color: rgb(81,191,208);
-    border: 2px solid rgb(81,191,208);
+    background-color: rgb(81, 191, 208);
+    border: 2px solid rgb(81, 191, 208);
     border-radius: 4px;
     color: #fff;
     display: block;
@@ -95,30 +95,33 @@
     margin-top: 20px;
     width: auto;
 }
-#aa{
+
+#aa {
     color: #777;
     font-size: 1.5rem;
-
 }
-.logologin{
+
+.logologin {
     position: absolute;
 }
-.imglogin{
+
+.imglogin {
     left: 33vw;
     position: relative;
     margin-top: 35px;
 }
-.logopass{
+
+.logopass {
     position: absolute;
 }
 
-.imgpass{
+.imgpass {
     left: 33vw;
     position: relative;
     margin-top: 35px;
-
 }
-.loginform{
+
+.loginform {
     display: flex;
     align-items: center;
     height: 10vh;

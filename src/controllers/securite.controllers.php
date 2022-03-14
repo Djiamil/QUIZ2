@@ -3,9 +3,9 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(isset($_REQUEST['action'])){
             if($_REQUEST['action']=="connexion"){
-                    $login=$_POST['login'];
-                    $password=$_POST['password'];
-                    connexion($login,$password);
+                $login=$_POST['login'];
+                $password=$_POST['password'];
+                connexion($login,$password);
             }elseif($_REQUEST['action']=="inscription"){
                 // extract($_POST);
                 $tab=[];
@@ -87,18 +87,15 @@ function inscription($tab):void{
     login_already_exists($tab['login'],$errors,'alogin');
     
     if(count($errors)==0){
-        // si pas d'erreur
         if(!is_connect()){
             recuperer_donnees($tab);
         }
         if(is_admin()){
             recuperer_donnees($tab,'ROLE_ADMIN',0);
         }
-        // enregistrement
-        $donnees_a_enregistrer=$tab;
-        unset($tab['password2']);
-        $data_json=array_to_json("users",$tab);
-        file_put_contents(PATH_DB,$data_json);        
+        unset($tab['password2']); 
+        array_to_json('users',$tab);
+        connexion($tab['login'],$tab['password']);
     }else{
         // Erreur de validation
         $_SESSION['KEY_ERRORS']=$errors;
@@ -123,17 +120,25 @@ function recuperer_donnees(&$tab,$role=ROLE_JOUEUR,$score=15){
     $tab['password2']=$apassword2;
     $tab['role']=$role;
     $tab['score']=$score;
-    $name=$_FILES['avatar']['name'];
-    $name=$alogin;
-    $pos = explode("@gmail.com",$name);
-    // $pos = stripos($alogin,'@');
-    $tempNam=$_FILES['avatar']['tmp_name'];
-    $tempNam=$pos;
-    var_dump($tempNam);die;
-    // move_uploaded_file($tempNam,'',$name);
+
+    $tabbbh = explode('@', $alogin);
+    $partieune = strtolower($tabbbh[0]);
+    // var_dump($partieune);die;
+    // $nouveauNom=substr($pos,2);
     
+    $tmpName = $_FILES['avatar']['tmp_name'];
+    $name =$_FILES['avatar']['name'];
+    $tabExtension = explode('.', $name);
+    $extension = strtolower(end($tabExtension));
+    $name=$partieune.'_'.$role;
+    $chemin=ROOT.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."uploads".DIRECTORY_SEPARATOR.$name.'.'.$extension;
+    move_uploaded_file($tmpName,$chemin);
+
+    // $size = $_FILES['file']['size'];
+    // $error = $_FILES['file']['error'];
+
+// move_uploaded_file($tmpName, './upload/'.$name);
 }
-// inscription
 function login_already_exists($login,&$errors,$key,$message='login already exists'){
     if(is_login_in_json_file($login)){
         $errors[$key]=$message;   

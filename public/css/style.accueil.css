@@ -1,4 +1,4 @@
-.paramAsider{
+.paramAsider {
     display: flex;
     margin: 1%;
     min-height: 86vh;
@@ -7,86 +7,96 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-.parametre{
+
+.parametre {
     background-color: #1ed7e4;
     display: flex;
     /* height: 14vh; */
     color: white;
 }
-.textparam{
+
+.textparam {
     display: flex;
     flex: 5;
     height: 10vh;
     align-items: center;
     justify-content: center;
 }
-.contButton{
+
+.contButton {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
 }
-button{
+
+button {
     background-color: rgb(0, 255, 221);
     width: 13rem;
     height: 2rem;
     color: aliceblue;
     font-size: 1.5rem;
 }
-.esiderInscrip{
+
+.esiderInscrip {
     background-color: #f2f2f2;
     display: flex;
     /* flex: 7; */
     width: 100%;
 }
-.avaG{
+
+.avaG {
     display: flex;
     flex: 2;
     margin: 3rem;
     flex-direction: column;
     background-color: aliceblue;
-
 }
-.divGtop{
+
+.divGtop {
     display: flex;
     flex: 2;
-    background:linear-gradient(white,rgb(17, 203, 228));
+    background: linear-gradient(white, rgb(17, 203, 228));
 }
-.photoim{
+
+.photoim {
     display: flex;
     flex: 2;
     height: 15rem;
     width: 15rem;
-    border-radius: 25rem;
-    border: 0.1rem solid rgb(14, 13, 13);
+    border-radius: 50%;
+    border: 0.3rem solid rgb(17, 203, 228);
     background-color: aliceblue;
-    background-image:url(../uploads/6.png);
+    background-image: url(../uploads/6.png);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: center;
     margin: 1rem;
 }
-.monNom{
+
+.monNom {
     display: flex;
     flex: 3;
     justify-items: center;
     align-items: center;
     margin: 1rem;
 }
-.divGbutton{
+
+.divGbutton {
     display: flex;
     flex: 4;
     width: 100%;
-
 }
-.questliste{
+
+.questliste {
     display: flex;
     flex: 1;
     width: 100%;
     justify-content: space-between;
 }
-.copy{
+
+.copy {
     display: flex;
     width: 2rem;
     height: 2rem;
@@ -94,7 +104,7 @@ button{
     margin: 2rem;
 }
 
-.plus{
+.plus {
     display: flex;
     width: 2rem;
     height: 2rem;
@@ -102,7 +112,7 @@ button{
     margin: 2rem;
 }
 
-.copyR{
+.copyR {
     display: flex;
     width: 2rem;
     height: 2rem;
@@ -110,41 +120,43 @@ button{
     margin: 2rem;
 }
 
-.plusR{
+.plusR {
     display: flex;
     width: 2rem;
     height: 2rem;
     float: right;
     margin: 2rem;
 }
-ul{
+
+ul {
     width: 98%;
 }
-li{
+
+li {
     list-style: none;
     margin: 2rem;
     font-size: 2rem;
 }
 
-
-
-
-.avaD{
+.avaD {
     display: flex;
     flex: 3;
     margin: 2rem;
     background-color: aliceblue;
 }
-.avaDG{
+
+.avaDG {
     display: flex;
     flex: 3;
     margin: 1rem;
     background-color: aliceblue;
 }
-.listejjour{
+
+.listejjour {
     display: block;
 }
-table{
+
+table {
     border-collapse: collapse;
     border: #1ed7e4 solid 0.3rem;
     display: flex;
@@ -154,29 +166,32 @@ table{
     margin-top: 0;
     position: absolute;
 }
-tr{
+
+tr {
     display: flex;
 }
-th{
+
+th {
     width: 15rem;
     margin: 1rem;
     font-size: 1.5rem;
     display: flex;
-   
 }
-td{
-    margin:1rem;
+
+td {
+    margin: 1rem;
     width: 15rem;
     font-weight: bolder;
     font-size: 1.5rem;
     display: flex;
-
 }
-a{
+
+a {
     text-decoration: none;
 }
-#suivant{
-    background-color:#1ed7e4;
+
+#suivant {
+    background-color: #1ed7e4;
     border: #1ed7e4 solid 0.3rem;
     margin-top: 64%;
     width: auto;

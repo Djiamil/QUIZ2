@@ -16,7 +16,7 @@
         <div class="typereponse">
             <h1>Type de reponse</h1>
             <select name="pets" id="reptype">
-                <h6>Donnez le type de repponse</6>
+                <h6>Donnez le type de repponse</h6>
                     <option value="Sinple">choix Simple</option>
                     <option value="Multiple">choix multiple</option>
                     <option value="texte">texte</option>
